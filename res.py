@@ -4,9 +4,10 @@ from bs4 import BeautifulSoup
 import smtplib
 id = os.environ['APP_USERNAME']
 password = os.environ['APP_PASSWORD']
+webhook = os.environ['webhook']
 
 def sendToDiscord(toSend):
-    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1116620119645360209/Gs3Xj7EhFfl4_NNAR0VQsiKkhT8SGjVwGhY55G4_G1ctba-keATUorwaP3OADM7BwL3W', content=toSend)
+    webhook = DiscordWebhook(url=webhook, content=toSend)
     webhook.execute()
 
 page = requests.get('https://www.tuiost.edu.np/result')
