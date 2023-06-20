@@ -26,5 +26,6 @@ jobs:
          env:
           APP_USERNAME: ${{secrets.APP_USERNAME}}
           APP_PASSWORD: ${{secrets.APP_PASSWORD}}
+          webhook: ${{secrets.webhook}}
          run: python res.py
           
