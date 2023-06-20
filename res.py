@@ -2,6 +2,8 @@ import requests
 from discord_webhook import DiscordWebhook
 from bs4 import BeautifulSoup
 import smtplib
+import os
+
 id = os.environ['APP_USERNAME']
 password = os.environ['APP_PASSWORD']
 webhook = os.environ['webhook']
