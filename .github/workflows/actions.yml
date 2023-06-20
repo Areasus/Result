@@ -2,7 +2,7 @@ name: run res.py
 
 on:
   schedule:
-    - cron: '* * * * *' # everyday from 4 to 8pm every 15 min  */15 10-14 * * *
+    - cron: '*/15 10-14 * * *' # everyday from 4 to 8pm every 15 min  */15 10-14 * * *
 
 jobs:
   build:
