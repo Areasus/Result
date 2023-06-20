@@ -6,10 +6,10 @@ import os
 
 id = os.environ['APP_USERNAME']
 password = os.environ['APP_PASSWORD']
-webhook = os.environ['webhook']
+get_webhook = os.environ['webhook']
 
 def sendToDiscord(toSend):
-    webhook = DiscordWebhook(url=webhook, content=toSend)
+    webhook = DiscordWebhook(url=get_webhook, content=toSend)
     webhook.execute()
 
 page = requests.get('https://www.tuiost.edu.np/result')
